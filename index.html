@@ -3920,9 +3920,6 @@ function PageHeading() {
     <section className="sh-page-heading">
       <div className="sh-page-heading-row">
         <h1 className="sh-page-heading-title">Meet the Team</h1>
-        <div className="sh-page-heading-art">
-          <img src={ASSET("teamHero", "assets/team-hero.png")} alt="SupplyHouse team with branded shipping boxes" />
-        </div>
       </div>
       <nav className="sh-page-subnav" aria-label="Our Team sections">
         {subnav.map((s) =>
@@ -3946,7 +3943,7 @@ function Hero({ people, locationCount }) {
           <div className="hero-eyebrow-team">Meet the Team · Powered by GRIT</div>
           <h1 className="hero-title-team">Real People.<br />Real&nbsp;Service.</h1>
           <p className="hero-sub-team">
-            900+ teammates across five locations — the customer service reps, warehouse leads, merchandisers, and engineers who pick, pack, and ship every SupplyHouse order.
+            Behind every order, phone call, and webpage, there's someone working hard to give you the best experience possible. Meet the team that makes SupplyHouse a great place for employees and customers alike.
           </p>
           <div className="hero-cta-row">
             <a href="#" className="btn btn-secondary btn-lg">
@@ -3956,24 +3953,6 @@ function Hero({ people, locationCount }) {
           </div>
         </div>
       </div>
-      <div className="hero-stat-strip">
-        <div className="hero-stat">
-          <div className="hero-stat-n">900+</div>
-          <div className="hero-stat-l">Team Members</div>
-        </div>
-        <div className="hero-stat">
-          <div className="hero-stat-n">{locationCount}</div>
-          <div className="hero-stat-l">Locations</div>
-        </div>
-        <div className="hero-stat">
-          <div className="hero-stat-n">2004</div>
-          <div className="hero-stat-l">Founded</div>
-        </div>
-        <div className="hero-stat">
-          <div className="hero-stat-n">G·R·I·T</div>
-          <div className="hero-stat-l">Core Values</div>
-        </div>
-      </div>
     </section>);
 
 }
@@ -3981,11 +3960,11 @@ function Hero({ people, locationCount }) {
 // ─── GRIT values band ─────────────────────────────────────────────
 function GritValues() {
   const values = [
-  { k: "G", label: "Generosity", copy: "We give back — to the trades, our communities, and each other." },
-  { k: "R", label: "Respect", copy: "Every voice on the team matters, regardless of title or location." },
-  { k: "I", label: "Innovation", copy: "We try things, ship them, and keep making the experience better." },
-  { k: "T", label: "Teamwork", copy: "All 900+ of us work together to serve every customer order." }];
-  const gritPayoff = "We show up — for the warehouse, the phones, and the long haul.";
+  { k: "G", label: "Generosity", copy: "We're quick to share our time, ideas, and successes." },
+  { k: "R", label: "Respect", copy: "We work to maintain an environment where everyone is valued." },
+  { k: "I", label: "Innovation", copy: "We're excited by new ideas that help us move forward." },
+  { k: "T", label: "Teamwork", copy: "We welcome and encourage contributions from everyone." }];
+  const gritPayoff = "We have the passion and confidence to approach challenges head-on.";
 
   return (
     <section className="grit-band">
@@ -3993,7 +3972,7 @@ function GritValues() {
         <div className="grit-head grit-head--left">
           <div className="hero-eyebrow-team">Our Core Values</div>
           <h2 className="grit-title">Powered by <span className="grit-title-mark">GRIT</span>.</h2>
-          <p className="grit-sub">Five values that guide how we hire, ship, and treat every customer call.</p>
+          <p className="grit-sub">Our 5 core values drive our company culture and guide everything we do.</p>
         </div>
         <div className="grit-grid">
           {values.map((v, i) =>
@@ -4028,9 +4007,8 @@ function TeamVideo({ videoId = "ScMzIvxBSi4" }) {
       <div className="video-inner video-inner--split">
         <div className="video-head video-head--left">
           <div className="hero-eyebrow-team">Ownership for All</div>
-          <h2 className="grit-title">We empower ownership.</h2>
+          <h2 className="grit-title">Ownership for All</h2>
           <p className="grit-sub">We all contribute to our success and we all share in it. Our Ownership for All program ensures each SupplyHouse team member will benefit financially from the company’s growth and accomplishments.</p>
-          <div className="video-note">Every teammate is an owner — not just in spirit, in the numbers.</div>
         </div>
         <div className="video-media">
           <div className="video-frame">
@@ -4055,8 +4033,8 @@ function OurStory({ videoId = "ScMzIvxBSi4" }) {
       <div className="story-inner">
         <div className="story-head">
           <div className="hero-eyebrow-team">Our Story · Since 2004</div>
-          <h2 className="story-title">From one warehouse to nine hundred people.</h2>
-          <p className="story-sub">The two-decade story of how SupplyHouse grew — told by the people who built it.</p>
+          <h2 className="story-title">Our Story</h2>
+          <p className="story-sub">The two-decade story of how SupplyHouse grew, told by the people who built it.</p>
         </div>
         <div className="story-media">
           <div className="story-frame">
@@ -4643,6 +4621,7 @@ function App() {
       <PageHeading />
       <Hero people={allPeople} locationCount={5} />
 
+      <div className="team-directory">
       <FilterBar
       locations={LOCATIONS}
       teams={TEAMS}
@@ -4698,6 +4677,7 @@ function App() {
           </section>
         </>
     }
+      </div>
 
       {/* Pets are now a team category — no separate band */}
 
@@ -4712,8 +4692,8 @@ function App() {
         <div className="cta-strip-inner">
           <div className="cta-strip-text">
             <div className="cta-strip-eyebrow">Hiring now</div>
-            <h2>Join the team behind the orders.</h2>
-            <p>We hire across customer service, warehouse, merchandising, marketing, and engineering — at all five locations and remote. Every teammate is an owner through Ownership for All.</p>
+            <h2>Join the Team</h2>
+            <p>SupplyHouse was recently Great Place to Work Certified for 2026–2027. If you'd like to join our team, <a href="#">apply here</a>.</p>
           </div>
           <div className="cta-strip-actions">
             <a href="#" className="btn btn-secondary btn-lg" style={{ backgroundColor: "rgb(7, 114, 156)" }}>
